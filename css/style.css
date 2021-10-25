@@ -3230,7 +3230,16 @@ h6 {
   position: relative;
   z-index: 9;
 }
-.client-info .smll {
+.smll {
+  color: #854fee;
+  font-family: "Rubik", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 55px;
+  position: relative;
+  z-index: 9;
+}
+.client-info {
   text-align: left;
   color: #000000;
   font-family: "Rubik", sans-serif;

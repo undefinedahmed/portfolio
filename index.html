@@ -188,8 +188,36 @@
           <div class="offset-lg-2 col-lg-4 col-md-6">
             <div class="client-info">
               <div class="d-flex mb-50">
-                <span class="lage">8</span>
-                <span class="smll">Months Of Experience</span>
+                <span class="smll">
+                  <script>
+                    today = new Date();
+                    past = new Date(2021, 01, 15);
+
+                    function calcDate(date1, date2) {
+                      var diff = Math.floor(date1.getTime() - date2.getTime());
+                      var day = 1000 * 60 * 60 * 24;
+
+                      var days = Math.floor(diff / day);
+                      var months = Math.floor(days / 31);
+                      var years = Math.floor(months / 12);
+                      var message;
+                      if (months > 12) {
+                        message =
+                          years + " yr and " + (months - 12) + " months of exp";
+                      } else {
+                        message = months + " months of experience";
+                      }
+                      document.write(message);
+                      // return message;
+                    }
+                    calcDate(today, past);
+                    // a = calcDate(today, past);
+                    // console.log(a);
+                  </script>
+                </span>
+
+                <!-- <span class="lage">8</span>
+                <span class="smll">Months Of Experience</span> -->
               </div>
             </div>
           </div>
@@ -205,7 +233,6 @@
           <div class="col-lg-8 text-center">
             <div class="main_title">
               <h2>What I'm Good at</h2>
-              
             </div>
           </div>
         </div>
@@ -270,6 +297,56 @@
         </div>
         <div class="filters-content">
           <div class="row portfolio-grid justify-content-center">
+            <div class="col-lg-4 col-md-6 all latest">
+              <div class="portfolio_box">
+                <div class="single_portfolio">
+                  <img
+                    class="img-fluid w-100"
+                    src="img/portfolio/quotes.jpg"
+                    alt=""
+                  />
+                  <div class="overlay"></div>
+                  <a href="https://quotes-appp.web.app/" target="_blank">
+                    <div class="icon">
+                      <span class="lnr lnr-pointer-left"></span>
+                    </div>
+                  </a>
+                </div>
+                <div class="short_info">
+                  <h4>
+                    <a href="https://quotes-appp.web.app/" target="_blank"
+                      >Quotes App</a
+                    >
+                  </h4>
+                  <p>Quotes React App using JavaScript Fetch method</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 all latest">
+              <div class="portfolio_box">
+                <div class="single_portfolio">
+                  <img
+                    class="img-fluid w-100"
+                    src="img/portfolio/git.jpg"
+                    alt=""
+                  />
+                  <div class="overlay"></div>
+                  <a href="https://github-repo-app2.web.app/" target="_blank">
+                    <div class="icon">
+                      <span class="lnr lnr-pointer-left"></span>
+                    </div>
+                  </a>
+                </div>
+                <div class="short_info">
+                  <h4>
+                    <a href="https://github-repo-app2.web.app/" target="_blank"
+                      >GitHub Repo App</a
+                    >
+                  </h4>
+                  <p>React App to fetch all git repos</p>
+                </div>
+              </div>
+            </div>
             <div class="col-lg-4 col-md-6 all latest">
               <div class="portfolio_box">
                 <div class="single_portfolio">
