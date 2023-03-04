@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>Ahmed Portfolio</title>
+    <title>Ahmed's Portfolio</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="vendors/linericon/style.css" />
@@ -78,9 +78,10 @@
           <div class="row">
             <div class="col-lg-7">
               <div class="banner_content">
-                <h3 class="text-uppercase">Hell0</h3>
+                <h3 class="text-uppercase">Hello</h3>
                 <h1 class="text-uppercase">I am Ahmed</h1>
-                <h5 class="text-uppercase">Frontend developer</h5>
+                <h5 class="text-uppercase">Full Stack Engineer</h5>
+
                 <div class="d-flex align-items-center">
                   <a
                     class="primary_btn tr-bg"
@@ -119,14 +120,22 @@
                 Introduce <br />
                 myself
               </h2>
-              <p>I'm a Frontend Developer from Karachi, Pakistan 🔥</p>
               <p>
-                I enjoy taking complex problems and turning them into simple and
-                interactive UI's. I love to research the modern ways to develop
-                web apps. I also have interests in Backend Development and
-                Making Mobile Apps as well! When I'm not coding, you can either
-                find me having a cup of tea or milk shake 😎
+                I'm a full-stack engineer with experience in Reactjs, Nodejs,
+                Expressjs, MongoDB, Firebase, and cloud functions, I have
+                developed multiple web applications from concept to deployment.
+                With a passion for creating high-quality, scalable, and
+                maintainable software, I pride myself on delivering solutions
+                that meet the needs of clients and end-users. Throughout my
+                career, I have honed my skills in building modern, responsive
+                web applications using React for the frontend, Node.js and
+                Express for the backend, and MongoDB for database management.
+                Additionally, I have experience working with Firebase for
+                real-time database and authentication, as well as cloud
+                functions for serverless computing. When I'm not coding, you can
+                either find me having a cup of tea or milk shake 😎
               </p>
+              <p></p>
             </div>
           </div>
         </div>
@@ -190,29 +199,27 @@
               <div class="d-flex mb-50">
                 <span class="smll">
                   <script>
-                    today = new Date();
-                    past = new Date(2021, 01, 15);
+                    var cc = new Date("10-feb-2021 12:00 AM");
+                    var c = new Date();
 
-                    function calcDate(date1, date2) {
-                      var diff = Math.floor(date1.getTime() - date2.getTime());
-                      var day = 1000 * 60 * 60 * 24;
+                    function timeDifference(d, dd) {
+                      var hour = 60 * 60 * 1000,
+                        day = hour * 24,
+                        month = day * 30,
+                        ms = Math.abs(d - dd);
 
-                      var days = Math.floor(diff / day);
-                      var months = Math.floor(days / 31);
-                      var years = Math.floor(months / 12);
-                      var message;
-                      if (months > 12) {
-                        message =
-                          years + " yr and " + (months - 12) + " months of exp";
-                      } else {
-                        message = months + " months of experience";
-                      }
-                      document.write(message);
-                      // return message;
+                      var months = parseInt(ms / month, 10);
+
+                      ms -= months * month;
+
+                      var days = parseInt(ms / day, 10);
+
+                      ms -= days * day;
+                      let msg = `${months} Months & ${days} Days of Experience.`;
+
+                      document.write(msg);
                     }
-                    calcDate(today, past);
-                    // a = calcDate(today, past);
-                    // console.log(a);
+                    timeDifference(cc, c);
                   </script>
                 </span>
 
